@@ -1,0 +1,18 @@
+﻿<Window x:Name="Historia" x:Class="Browser.History"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="History" Height="550" Width="843" Closing="Historia_Closing" KeyUp="Historia_KeyUp">
+    <Grid>
+        <ListView x:Name="lbHistoria" Height="473" Margin="10,10,10,0" VerticalAlignment="Top" MouseDoubleClick="lbHistoria_MouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="150px" Header="Data" DisplayMemberBinding="{Binding data}"/>
+                    <GridViewColumn Width="250px" Header="Tytuł" DisplayMemberBinding="{Binding title}"/>
+                    <GridViewColumn Width="400px" Header="Adres" DisplayMemberBinding="{Binding path}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Wyczyść Historię" HorizontalAlignment="Left" Margin="10,488,0,0" VerticalAlignment="Top" Width="106" Height="21" Click="Button_Click"/>
+
+    </Grid>
+</Window>

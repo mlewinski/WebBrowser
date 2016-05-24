@@ -1,0 +1,31 @@
+﻿<Window x:Class="Browser.accessibilitySettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Accessibility Settings" Height="202" Width="322" Closing="Window_Closing" KeyUp="Window_KeyUp">
+    <Grid>
+        <GroupBox Header="Ustawienia">
+            <Grid Margin="0,0,-2,-12">
+                <Label Content="Głośność :" Margin="0,10,204,0" HorizontalAlignment="Right" Width="78" Height="30" VerticalAlignment="Top"/>
+                <ComboBox x:Name="cbVolume" Height="25" VerticalAlignment="Top" HorizontalAlignment="Right" Width="129" Margin="0,15,10,0">
+                    <ComboBoxItem Content="Bardzo niska"/>
+                    <ComboBoxItem Content="Niska"/>
+                    <ComboBoxItem Content="Normalna"/>
+                    <ComboBoxItem Content="Duża"/>
+                    <ComboBoxItem Content="Bardzo Duża"/>
+                </ComboBox>
+                <Separator Height="16" Margin="10,45,0,0" VerticalAlignment="Top"/>
+                <Label Content="Szybkość mowy lektora :" Margin="0,61,144,0" HorizontalAlignment="Right" Width="138" Height="30" VerticalAlignment="Top"/>
+                <ComboBox x:Name="cbRate" Height="25" VerticalAlignment="Top" HorizontalAlignment="Right" Width="129" Margin="0,66,10,0">
+                    <ComboBoxItem Content="Bardzo wolny"/>
+                    <ComboBoxItem Content="Wolny"/>
+                    <ComboBoxItem Content="Normalny"/>
+                    <ComboBoxItem Content="Szybki"/>
+                    <ComboBoxItem Content="Bardzo szybki"/>
+                </ComboBox>
+                <Button HorizontalAlignment="Left" Height="30" Margin="221,104,0,0" VerticalAlignment="Top" Width="51" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click">
+                    <Image Source="/Icons/accept.png"/>
+                </Button>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

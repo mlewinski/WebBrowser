@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D809FEE1-E742-4FA1-BD9E-E1DBFC1A698D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Browser</RootNamespace>
+    <AssemblyName>Browser</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="presentationframework.aero" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Speech" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="accessibilitySettings.xaml.cs">
+      <DependentUpon>accessibilitySettings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Class\registryClass.cs" />
+    <Compile Include="email.xaml.cs">
+      <DependentUpon>email.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Source.xaml.cs">
+      <DependentUpon>Source.xaml</DependentUpon>
+    </Compile>
+    <Page Include="accessibilitySettings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="email.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="History.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="History.xaml.cs">
+      <DependentUpon>History.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Source.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\accept.png" />
+    <Resource Include="Icons\add.png" />
+    <Resource Include="Icons\application.png" />
+    <Resource Include="Icons\applications.png" />
+    <Resource Include="Icons\application_add.png" />
+    <Resource Include="Icons\application_edit.png" />
+    <Resource Include="Icons\application_lock.png" />
+    <Resource Include="Icons\application_next.png" />
+    <Resource Include="Icons\application_remove.png" />
+    <Resource Include="Icons\application_up.png" />
+    <Resource Include="Icons\archive.png" />
+    <Resource Include="Icons\attachment.png" />
+    <Resource Include="Icons\back.png" />
+    <Resource Include="Icons\blog_post.png" />
+    <Resource Include="Icons\blog_post_accept.png" />
+    <Resource Include="Icons\blog_post_delete.png" />
+    <Resource Include="Icons\blog_post_edit.png" />
+    <Resource Include="Icons\calculator.png" />
+    <Resource Include="Icons\calculator_accept.png" />
+    <Resource Include="Icons\calculator_add.png" />
+    <Resource Include="Icons\calculator_remove.png" />
+    <Resource Include="Icons\calendar_date.png" />
+    <Resource Include="Icons\calendar_empty.png" />
+    <Resource Include="Icons\cd.png" />
+    <Resource Include="Icons\cd_accept.png" />
+    <Resource Include="Icons\cd_add.png" />
+    <Resource Include="Icons\cd_down.png" />
+    <Resource Include="Icons\cd_remove.png" />
+    <Resource Include="Icons\chart.png" />
+    <Resource Include="Icons\chart_accept.png" />
+    <Resource Include="Icons\chart_add.png" />
+    <Resource Include="Icons\chart_remove.png" />
+    <Resource Include="Icons\clock.png" />
+    <Resource Include="Icons\comment.png" />
+    <Resource Include="Icons\comments.png" />
+    <Resource Include="Icons\comments_add.png" />
+    <Resource Include="Icons\comments_remove.png" />
+    <Resource Include="Icons\comment_add.png" />
+    <Resource Include="Icons\comment_edit.png" />
+    <Resource Include="Icons\comment_remove.png" />
+    <Resource Include="Icons\community_users.png" />
+    <Resource Include="Icons\computer.png" />
+    <Resource Include="Icons\computers.png" />
+    <Resource Include="Icons\computer_accept.png" />
+    <Resource Include="Icons\computer_remove.png" />
+    <Resource Include="Icons\database.png" />
+    <Resource Include="Icons\database_accept.png" />
+    <Resource Include="Icons\database_add.png" />
+    <Resource Include="Icons\database_down.png" />
+    <Resource Include="Icons\database_lock.png" />
+    <Resource Include="Icons\database_next.png" />
+    <Resource Include="Icons\database_previous.png" />
+    <Resource Include="Icons\database_process.png" />
+    <Resource Include="Icons\database_remove.png" />
+    <Resource Include="Icons\database_search.png" />
+    <Resource Include="Icons\database_up.png" />
+    <Resource Include="Icons\down.png" />
+    <Resource Include="Icons\eject.png" />
+    <Resource Include="Icons\fast_forward.png" />
+    <Resource Include="Icons\favorite.png" />
+    <Resource Include="Icons\favorite_add.png" />
+    <Resource Include="Icons\favorite_remove.png" />
+    <Resource Include="Icons\folder.png" />
+    <Resource Include="Icons\folder_accept.png" />
+    <Resource Include="Icons\folder_add.png" />
+    <Resource Include="Icons\folder_down.png" />
+    <Resource Include="Icons\folder_edit.png" />
+    <Resource Include="Icons\folder_full.png" />
+    <Resource Include="Icons\folder_full_accept.png" />
+    <Resource Include="Icons\folder_full_add.png" />
+    <Resource Include="Icons\folder_full_delete.png" />
+    <Resource Include="Icons\folder_next.png" />
+    <Resource Include="Icons\folder_previous.png" />
+    <Resource Include="Icons\folder_process.png" />
+    <Resource Include="Icons\folder_remove.png" />
+    <Resource Include="Icons\folder_up.png" />
+    <Resource Include="Icons\forward_new_mail.png" />
+    <Resource Include="Icons\help.png" />
+    <Resource Include="Icons\home.png" />
+    <Resource Include="Icons\home_next.png" />
+    <Resource Include="Icons\html_page_accept.png" />
+    <Resource Include="Icons\html_page_warning.png" />
+    <Resource Include="Icons\image.png" />
+    <Resource Include="Icons\image_add.png" />
+    <Resource Include="Icons\image_edit.png" />
+    <Resource Include="Icons\image_lock.png" />
+    <Resource Include="Icons\image_multi.png" />
+    <Resource Include="Icons\image_next.png" />
+    <Resource Include="Icons\image_remove.png" />
+    <Resource Include="Icons\image_up.png" />
+    <Resource Include="Icons\info.png" />
+    <Resource Include="Icons\lock.png" />
+    <Resource Include="Icons\lock_disabled.png" />
+    <Resource Include="Icons\lock_off.png" />
+    <Resource Include="Icons\lock_off_disabled .png" />
+    <Resource Include="Icons\mail.png" />
+    <Resource Include="Icons\mail_accept.png" />
+    <Resource Include="Icons\mail_add.png" />
+    <Resource Include="Icons\mail_edit.png" />
+    <Resource Include="Icons\mail_next.png" />
+    <Resource Include="Icons\mail_remove.png" />
+    <Resource Include="Icons\movie_track.png" />
+    <Resource Include="Icons\movie_track_add.png" />
+    <Resource Include="Icons\movie_track_next.png" />
+    <Resource Include="Icons\movie_track_remove.png" />
+    <Resource Include="Icons\next.png" />
+    <Resource Include="Icons\notes_edit.png" />
+    <Resource Include="Icons\note_accept.png" />
+    <Resource Include="Icons\note_add.png" />
+    <Resource Include="Icons\note_edit.png" />
+    <Resource Include="Icons\note_remove.png" />
+    <Resource Include="Icons\page.png" />
+    <Resource Include="Icons\page_accept.png" />
+    <Resource Include="Icons\page_add.png" />
+    <Resource Include="Icons\page_down.png" />
+    <Resource Include="Icons\page_edit.png" />
+    <Resource Include="Icons\page_next.png" />
+    <Resource Include="Icons\page_previous.png" />
+    <Resource Include="Icons\page_process.png" />
+    <Resource Include="Icons\page_remove.png" />
+    <Resource Include="Icons\page_search.png" />
+    <Resource Include="Icons\page_swap.png" />
+    <Resource Include="Icons\page_up.png" />
+    <Resource Include="Icons\pause.png" />
+    <Resource Include="Icons\pdf.png" />
+    <Resource Include="Icons\play.png" />
+    <Resource Include="Icons\printer.png" />
+    <Resource Include="Icons\printer_search.png" />
+    <Resource Include="Icons\process.png" />
+    <Resource Include="Icons\process_accept.png" />
+    <Resource Include="Icons\process_add.png" />
+    <Resource Include="Icons\process_remove.png" />
+    <Resource Include="Icons\record.png" />
+    <Resource Include="Icons\remove.png" />
+    <Resource Include="Icons\repeat.png" />
+    <Resource Include="Icons\rewind.png" />
+    <Resource Include="Icons\rss.png" />
+    <Resource Include="Icons\rss_add.png" />
+    <Resource Include="Icons\rss_edit.png" />
+    <Resource Include="Icons\rss_next.png" />
+    <Resource Include="Icons\rss_remove.png" />
+    <Resource Include="Icons\search.png" />
+    <Resource Include="Icons\search_add.png" />
+    <Resource Include="Icons\search_remove.png" />
+    <Resource Include="Icons\she_user.png" />
+    <Resource Include="Icons\she_users.png" />
+    <Resource Include="Icons\she_user_accept.png" />
+    <Resource Include="Icons\she_user_add.png" />
+    <Resource Include="Icons\she_user_comment.png" />
+    <Resource Include="Icons\she_user_remove.png" />
+    <Resource Include="Icons\shopping_cart.png" />
+    <Resource Include="Icons\shopping_cart_accept.png" />
+    <Resource Include="Icons\shopping_cart_down.png" />
+    <Resource Include="Icons\shopping_cart_remove.png" />
+    <Resource Include="Icons\shopping_cart_up.png" />
+    <Resource Include="Icons\skip_backward.png" />
+    <Resource Include="Icons\skip_forward.png" />
+    <Resource Include="Icons\sound.png" />
+    <Resource Include="Icons\sound_off.png" />
+    <Resource Include="Icons\sound_on.png" />
+    <Resource Include="Icons\stop.png" />
+    <Resource Include="Icons\up.png" />
+    <Resource Include="Icons\user.png" />
+    <Resource Include="Icons\users.png" />
+    <Resource Include="Icons\user_accept.png" />
+    <Resource Include="Icons\user_add.png" />
+    <Resource Include="Icons\user_comment.png" />
+    <Resource Include="Icons\user_comments.png" />
+    <Resource Include="Icons\user_has_new_email.png" />
+    <Resource Include="Icons\user_remove.png" />
+    <Resource Include="Icons\video_favorite.png" />
+    <Resource Include="Icons\warning.png" />
+    <Resource Include="Icons\window.png" />
+    <Resource Include="Icons\windows.png" />
+    <Resource Include="Icons\window_add.png" />
+    <Resource Include="Icons\window_edit.png" />
+    <Resource Include="Icons\window_lock.png" />
+    <Resource Include="Icons\window_next.png" />
+    <Resource Include="Icons\window_remove.png" />
+    <Resource Include="Icons\window_up.png" />
+    <Resource Include="Icons\word.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
